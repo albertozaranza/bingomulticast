@@ -15,7 +15,6 @@ public class BingoServer {
         for(int i = 0; i<=10; i++) {
             sorteados[i]=0;
         }
-        System.out.println("COMEÇOU NO SENDER");
         try {
             while(true) {
                 flag = 0;
@@ -24,7 +23,7 @@ public class BingoServer {
                 int sorteado = new Random().nextInt(11);
                 System.out.println("Sorteando----> "+ sorteado + "=====" + sorteados[sorteado]);
                 if(sorteados[sorteado]==1) {
-                    System.out.println("JÁ FOI SORTEADO");
+                    System.out.println("Jï¿½ FOI SORTEADO");
                     continue;
                 }else {
                     sorteados[sorteado] = 1;
@@ -40,7 +39,7 @@ public class BingoServer {
                     }
                 }
                 if(flag==0) {
-                    System.out.println("Já sorteou todo mundo");
+                    System.out.println("Jï¿½ sorteou todo mundo");
                     break;
                 }
             }

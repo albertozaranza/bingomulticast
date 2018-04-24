@@ -19,7 +19,7 @@ public class BingoClient {
         cartela[3] = 1;
         int flag = 0;
         try {
-            System.out.println("COMEÇOU");
+            System.out.println("COMEï¿½OU");
             InetAddress group = InetAddress.getByName("230.0.0.0");
             MulticastSocket mult = new MulticastSocket(3456);
             mult.joinGroup(group);
@@ -28,14 +28,11 @@ public class BingoClient {
                 byte[] buffer = new byte[2];
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 mult.receive(packet);
-                //System.out.println(new String(buffer));
 
                 String entrada = new String(buffer);
                 System.out.println("TAMANHO" + entrada.length());
                 entrada = entrada.trim();
                 sorteado = Integer.parseInt(entrada);
-
-
 
                 System.out.println("Sorteado-- "+ sorteado);
                 cartela[sorteado] = 0;
